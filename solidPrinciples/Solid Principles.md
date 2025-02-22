@@ -1,5 +1,9 @@
 The SOLID principles are a set of design principles in object-oriented programming that help to create more understandable, flexible, and maintainable software. SOLID is an acronym that stands for:
-
+- **S**ingle Responsibility Principle (SRP)
+- **O**pen/Closed Principle (OCP)
+- **L**iskov Substitution Principle (LSP)
+- **I**nterface Segregation Principle (ISP)
+- **D**ependency Inversion Principle (DIP)
 1. **S**ingle Responsibility Principle (SRP): A class should have only one reason to change, meaning it should have only one job or responsibility.
 ### Example of Single Responsibility Principle (SRP)
 
