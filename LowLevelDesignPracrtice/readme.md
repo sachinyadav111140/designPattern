@@ -20,3 +20,5 @@
     6. Maintain user privacy.
     7. System should be maintainable and extensible.
     8. Provide reliable real-time updates.
+
+![Parking Diagram](ParkingTool/simpleParking.drawio.png)
