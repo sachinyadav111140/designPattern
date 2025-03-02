@@ -1,6 +1,6 @@
-#Low level design of parking the vehicels
+# Low level design of parking the vehicels
 
-##Functional Requirements 
+## Functional Requirements 
     1. Support parking for cars and bikes.
     2. Single level with multiple parking spots.
     3. Track available and occupied spots.
