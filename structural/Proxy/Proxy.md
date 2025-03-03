@@ -117,7 +117,7 @@ classDiagram
 
     AccessControl <|.. RealAccessControl : is a
     AccessControl <|.. AccessControlProxy : is a
-    AccessControl o-- AccessControlProxy : has a
+    AccessControl --> AccessControlProxy : has a
     Client --> AccessControlProxy : uses
 ```
 
