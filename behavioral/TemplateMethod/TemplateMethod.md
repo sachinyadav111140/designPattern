@@ -116,3 +116,36 @@ The Template Method design pattern is used to define the skeleton of an algorith
 
 
 In this case steps would same and client can override based on the their requirement.
+
+## Class Diagram for Template Method Design Pattern Example
+
+Below is the class diagram for the given example of the Template Method design pattern in Java:
+
+```mermaid
+classDiagram
+    class Beverage {
+        +prepareRecipe() : void
+        +boilWater() : void
+        +pourInCup() : void
+        #brew() : void
+        #addCondiments() : void
+    }
+
+    class Tea {
+        +brew() : void
+        +addCondiments() : void
+    }
+
+    class Coffee {
+        +brew() : void
+        +addCondiments() : void
+    }
+
+    Beverage <|-- Tea
+    Beverage <|-- Coffee
+```
+
+In this diagram:
+- `Beverage` is the abstract base class that defines the template method `prepareRecipe()` and the concrete methods `boilWater()` and `pourInCup()`.
+- `Tea` and `Coffee` are concrete subclasses that implement the abstract methods `brew()` and `addCondiments()` defined in the `Beverage` class.
+- The arrows indicate that `Tea` and `Coffee` inherit from `Beverage`.
