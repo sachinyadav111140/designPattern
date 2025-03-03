@@ -49,18 +49,18 @@ Create a proxy class that controls access to the real subject. The proxy checks 
 
 ```java
 public class AccessControlProxy implements AccessControl {
-    private RealAccessControl realAccessControl;
+    private AccessControl accessControl;
     private String userRole;
 
     public AccessControlProxy(String userRole) {
-        this.realAccessControl = new RealAccessControl();
+        this.accessControl = new RealAccessControl();
         this.userRole = userRole;
     }
 
     @Override
     public void accessResource() {
         if ("ADMIN".equalsIgnoreCase(userRole)) {
-            realAccessControl.accessResource();
+            accessControl.accessResource();
         } else {
             System.out.println("Access Denied: You do not have the necessary permissions.");
         }
@@ -99,11 +99,13 @@ classDiagram
     }
 
     class RealAccessControl {
+        <<concrete class>>
         +accessResource()
     }
 
     class AccessControlProxy {
-        -RealAccessControl realAccessControl
+        <<concrete class>>
+        -AccessControl accessControl
         -String userRole
         +AccessControlProxy(String userRole)
         +accessResource()
@@ -115,7 +117,7 @@ classDiagram
 
     AccessControl <|.. RealAccessControl : is a
     AccessControl <|.. AccessControlProxy : is a
-    RealAccessControl o-- AccessControlProxy : has a
+    AccessControl o-- AccessControlProxy : has a
     Client --> AccessControlProxy : uses
 ```
 
