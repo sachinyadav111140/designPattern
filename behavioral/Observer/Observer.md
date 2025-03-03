@@ -124,3 +124,52 @@ public class Main {
 5. **Main Class**: Demonstrates the usage of the observer pattern by creating a product and users, registering the users as observers, and changing the product's stock status.
 
 This example shows how the Observer Design Pattern can be used to notify users when a product is back in stock.
+
+
+## Class Diagram
+
+Below is the class diagram for the Product Availability Notification example using the Observer Design Pattern:
+
+```mermaid
+classDiagram
+    direction LR
+    class Observer {
+        <<interface>>
+        +update(String productName)
+    }
+
+    class Subject {
+        <<interface>>
+        +registerObserver(Observer observer)
+        +removeObserver(Observer observer)
+        +notifyObservers()
+    }
+
+    class Product {
+        <<Concrete class>>
+        -List~Observer~ observers
+        -String name
+        -boolean inStock
+        +Product(String name)
+        +setInStock(boolean inStock)
+        +registerObserver(Observer observer)
+        +removeObserver(Observer observer)
+        +notifyObservers()
+    }
+
+    class User {
+        -String name
+        +User(String name)
+        +update(String productName)
+    }
+
+    class Main {
+        +main(String[] args)
+    }
+
+    Observer <|.. User : is a
+    Subject <|.. Product : is a
+    Product --> Observer : notifies (has)
+    Main --> Product : uses
+    Main --> User : uses
+```
