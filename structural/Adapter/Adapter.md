@@ -128,7 +128,7 @@ classDiagram
 
     PaymentGateway <|.. PayPalAdapter : is a
     PaymentGateway <|.. CreditCardAdapter : is a
-    PayPalAdapter --> PayPal : has a
-    CreditCardAdapter --> CreditCard : has a
+    PayPalAdapter o-- PayPal : has a
+    CreditCardAdapter o-- CreditCard : has a
     PaymentProcessor --> PaymentGateway : uses
 ```
