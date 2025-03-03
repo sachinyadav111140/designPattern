@@ -127,8 +127,8 @@ classDiagram
         +prepareRecipe() : void
         +boilWater() : void
         +pourInCup() : void
-        #brew() : void
-        #addCondiments() : void
+        #abstract brew() : void
+        #abstract addCondiments() : void
     }
 
     class Tea {
