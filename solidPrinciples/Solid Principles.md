@@ -4,7 +4,10 @@ The SOLID principles are a set of design principles in object-oriented programmi
 - **L**iskov Substitution Principle (LSP)
 - **I**nterface Segregation Principle (ISP)
 - **D**ependency Inversion Principle (DIP)
+
+
 1. **S**ingle Responsibility Principle (SRP): A class should have only one reason to change, meaning it should have only one job or responsibility.
+
 ### Example of Single Responsibility Principle (SRP)
 
 #### Not Following SRP:
@@ -46,7 +49,10 @@ class EmailService {
 ```
 
 In this example, the responsibilities are separated into different classes. The `User` class handles user authentication, and the `EmailService` class handles email sending. This adheres to the Single Responsibility Principle.
+
+
 2. **O**pen/Closed Principle (OCP): Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification.
+
 So it means we should not touch or update the existing code. instead of that we can extend the class and add the new feature in child class. so existing code wil not be updated.
 
 ### Example of Open/Closed Principle (OCP)
@@ -124,7 +130,9 @@ class AreaCalculator {
 
 In this example, the `AreaCalculator` class is open for extension but closed for modification. We can add new shapes like `Circle` without modifying the `AreaCalculator` class.
 3. **L**iskov Substitution Principle (LSP): Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.
+
 Examples -: if you are creating any child class you should not reduce the feature of parent class. always it should extend the feature not the narrow it down.
+
 ### Example of Liskov Substitution Principle (LSP)
 
 #### Not Following LSP:
@@ -172,6 +180,7 @@ class Ostrich extends Bird {
 
 In this example, the `Bird` class hierarchy is restructured to ensure that all subclasses can be substituted for the `Bird` class without altering the expected behavior. The `Ostrich` class no longer attempts to fly, adhering to the Liskov Substitution Principle.
 4. **I**nterface Segregation Principle (ISP): Clients should not be forced to depend on interfaces they do not use. Instead of one large interface, many small, specific interfaces are preferred.
+
 Examples -:
 we should use the interface based on the required relevent features don't add any method/feature which is not useful. we can create muliple class based on the requirement.
 ### Example of Interface Segregation Principle (ISP)
@@ -234,7 +243,10 @@ class RobotWorker implements Workable {
 ```
 
 In this example, the interfaces are segregated based on functionality. The `RobotWorker` class only implements the `Workable` interface, which it needs, and is not forced to implement the `Eatable` interface.
+
+
 5. **D**ependency Inversion Principle (DIP): High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions.
+
 Examples -: we should always use the interface name in the left side and right side implemented one so in future directly we can update the implemented class if required.
 ### Example of Dependency Inversion Principle (DIP)
 

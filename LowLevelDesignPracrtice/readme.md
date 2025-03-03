@@ -22,3 +22,16 @@
     8. Provide reliable real-time updates.
 
 ![Parking Diagram](ParkingTool/simpleParking.drawio.png)
+
+## Objects
+    1. Parking -: Entry Gate, Exit Gate
+    2. Parking Spot
+    3. Vehicle -: Bike, car, SUV
+    4. Ticket
+    5. Payment
+    6. Entry Gate
+    7. Exit Gate
+
+Parking
+    ParkingLevel
+    
