@@ -87,7 +87,7 @@ public class Main {
     }
 }
 ```
-
+# Class diagram
 
 ```mermaid
 classDiagram
@@ -120,8 +120,9 @@ classDiagram
         +double getCost()
     }
 
-    Coffee <|.. SimpleCoffee
-    Coffee <|.. CoffeeDecorator
-    CoffeeDecorator <|-- MilkDecorator
-    CoffeeDecorator <|-- SugarDecorator
+    Coffee <|.. SimpleCoffee : "is a"
+    Coffee <|.. CoffeeDecorator : "is a"
+    CoffeeDecorator <|-- MilkDecorator : "is a"
+    CoffeeDecorator <|-- SugarDecorator : "is a"
+    Coffee o-- CoffeeDecorator : "has a"
 ```
