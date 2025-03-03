@@ -77,3 +77,33 @@ public class StrategyPatternDemo {
 
 5. **File Encryption**:
     - Various encryption algorithms (e.g., AES, DES, RSA) can be implemented as strategies. The context can choose the appropriate encryption strategy based on security requirements and performance considerations.
+
+
+    ## Class Diagram
+
+    ```mermaid
+    classDiagram
+        Strategy <|-- ConcreteStrategyA : is a
+        Strategy <|-- ConcreteStrategyB : is a
+        Context o-- Strategy : has a
+
+        class Strategy {
+            <<interface>>
+            +execute()
+        }
+
+        class ConcreteStrategyA {
+            +execute()
+        }
+
+        class ConcreteStrategyB {
+            +execute()
+        }
+
+        class Context {
+            -Strategy strategy
+            +Context(Strategy strategy)
+            +setStrategy(Strategy strategy)
+            +executeStrategy()
+        }
+    ```
