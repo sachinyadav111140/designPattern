@@ -147,11 +147,11 @@
             + processPayment(String paymentType, double amount)
         }
 
-        Payment <|-- CreditCardPayment
-        Payment <|-- PayPalPayment
-        PaymentGateway <|.. StripeGateway
-        PaymentGateway <|.. PayPalGateway
-        Payment --> PaymentGateway
+        Payment <|-- CreditCardPayment : is a
+        Payment <|-- PayPalPayment : is a
+        PaymentGateway <|.. StripeGateway  : is a
+        PaymentGateway <|.. PayPalGateway : is a
+        Payment --> PaymentGateway : has a
         class CreditCardPayment {
             <<concrete class from payment>>
             + makePayment(double amount)
