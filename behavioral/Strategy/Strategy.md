@@ -83,8 +83,8 @@ public class StrategyPatternDemo {
 
     ```mermaid
     classDiagram
-        Strategy <|-- ConcreteStrategyA : is a
-        Strategy <|-- ConcreteStrategyB : is a
+        Strategy <|.. ConcreteStrategyA : is a
+        Strategy <|.. ConcreteStrategyB : is a
         Context --> Strategy : has a
 
         class Strategy {
