@@ -158,6 +158,7 @@ classDiagram
     }
 
     class User {
+        <<concrete class>>
         -String name
         +User(String name)
         +update(String productName)
