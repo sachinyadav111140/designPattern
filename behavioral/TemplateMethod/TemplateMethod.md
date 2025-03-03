@@ -124,6 +124,7 @@ Below is the class diagram for the given example of the Template Method design p
 ```mermaid
 classDiagram
     class Beverage {
+        <<abstract>>
         +prepareRecipe() : void
         +boilWater() : void
         +pourInCup() : void
@@ -132,17 +133,19 @@ classDiagram
     }
 
     class Tea {
+        <<concrete class>>
         +brew() : void
         +addCondiments() : void
     }
 
     class Coffee {
+        <<concrete class>>
         +brew() : void
         +addCondiments() : void
     }
 
-    Beverage <|-- Tea
-    Beverage <|-- Coffee
+    Beverage <|-- Tea : is a
+    Beverage <|-- Coffee : is a
 ```
 
 In this diagram:
