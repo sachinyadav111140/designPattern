@@ -124,5 +124,5 @@ classDiagram
     Coffee <|.. CoffeeDecorator : is a
     CoffeeDecorator <|-- MilkDecorator : is a
     CoffeeDecorator <|-- SugarDecorator : is a
-    Coffee o-- CoffeeDecorator : has a
+
 ```
