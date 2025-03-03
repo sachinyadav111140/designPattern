@@ -85,7 +85,7 @@ public class StrategyPatternDemo {
     classDiagram
         Strategy <|-- ConcreteStrategyA : is a
         Strategy <|-- ConcreteStrategyB : is a
-        Context o-- Strategy : has a
+        Context --> Strategy : has a
 
         class Strategy {
             <<interface>>
