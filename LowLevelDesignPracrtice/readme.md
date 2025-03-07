@@ -9,7 +9,7 @@
     6. Calculate fees based on duration.
     7. Support payment processing.
     8. Handle lost tickets.
-    9. Real-time updates on spot availability.
+    9. Real-time updates on spot availability. -:
 
 ## Non Functional Requirement
     1. System should be highly available.
