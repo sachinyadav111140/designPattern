@@ -42,14 +42,17 @@ public class GitLeaning {
     }
 
     public LocalDate getEndDate() {
+        System.out.println("getEndDate called");
         return endDate;
     }
 
     public TicketStatus getStatus() {
+        System.out.println("getStatus called");
         return status;
     }
 
     public void setStatus(TicketStatus status) {
+        System.out.println("setStatus called");
         this.status = status;
     }
 
