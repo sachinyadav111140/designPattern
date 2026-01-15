@@ -29,6 +29,7 @@ public class GitLeaning {
     }
 
     public String getTitle() {
+        System.out.println("getTitle called");
         return title;
     }
 
